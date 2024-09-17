@@ -1,7 +1,8 @@
 :root {
     --white: #e5eaf5;
     --blue: #a0d2eb;
-    --black: #484d5f
+    --black: #484d5f;
+    --naviBlue: #845bb3;
 }
 
 * {
@@ -12,8 +13,10 @@
 }
 
 .title-section {
-    margin: 20px 0xp;
+    padding-top: 20px;
+    font-size: 30px;
     text-align: center;
+    color: var(--naviBlue);
 }
 
 .studentForm {
