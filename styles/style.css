@@ -41,7 +41,7 @@
 
 .studentForm input,
 button,
-.input {
+.studentForm .input {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 20px;
@@ -50,9 +50,10 @@ button,
 }
 
 @media screen and (max-width : 576px) {
-    section{
+    section {
         padding: 10px;
     }
+
     .studentForm {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         width: 100%;

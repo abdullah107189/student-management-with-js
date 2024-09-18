@@ -5,7 +5,10 @@ addStudentBtn.addEventListener('click', (e) => {
     e.preventDefault()
     const inputName = document.getElementById('input-name')
     const inputAge = document.getElementById('input-age')
-    if (inputName.value === '' || inputAge.value === '') {
+    const inputEmail = document.getElementById('input-email')
+    const inputPhoneNumber = document.getElementById('input-phone-number')
+    const inputDateOfBirth = document.querySelector('#input-birth')
+    if (inputName.value === '' || inputAge.value === '' || inputEmail.value === '' || inputPhoneNumber.value === '' || inputDateOfBirth === '') {
         return alert('please full fill input')
     }
     const datas = document.querySelector('input[name="gender"]:checked')
@@ -16,9 +19,13 @@ addStudentBtn.addEventListener('click', (e) => {
     const studentInfoObject = {
         'name': inputName.value,
         'marks': inputAge.value,
-        'gender': datas.value
+        'gender': datas.value,
+        'email': inputEmail.value,
+        'phone': inputPhoneNumber.value,
+        'dob': inputDateOfBirth.value
     }
     studentsInfoArray.push(studentInfoObject)
+    console.log(studentsInfoArray)
     localStorage.setItem('studentsInfoArray', JSON.stringify(studentsInfoArray))
 
 
