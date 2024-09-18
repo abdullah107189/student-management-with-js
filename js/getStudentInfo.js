@@ -19,3 +19,19 @@ for (let data of getData) {
     `
     cards.appendChild(card)
 }
+const studentSearch = document.getElementById('studentSearch')
+studentSearch.addEventListener('keyup', (e) => {
+    const serchText = e.target.value
+    console.log(serchText)
+    if (getData.includes(serchText)) {
+        console.log()
+        //todo
+    }
+
+})
+
+const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(studentSearch.value)
+
+}
