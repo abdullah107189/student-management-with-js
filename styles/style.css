@@ -14,16 +14,24 @@
 }
 
 .title-section {
-    padding-top: 20px;
+    padding: 20px 0px;
     font-size: 30px;
     text-align: center;
     color: var(--naviBlue);
+}
+.AllStudentInfoBtn{
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--naviBlue);
+    box-shadow:2px 2px 10px ;
 }
 
 .studentForm {
     width: 80%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;

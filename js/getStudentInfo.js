@@ -11,6 +11,10 @@ for (let data of getData) {
                     <p><span class="bold-label">Email:</span> ${data.email}</p>
                     <p><span class="bold-label">Phone:</span> ${data.phone}</p>
                     <p><span class="bold-label">Date:</span> ${data.dob}</p>
+                    <div class="btnContainer">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
               
     `
     cards.appendChild(card)
