@@ -1,26 +1,28 @@
-const studentsInfoArray = [];
+let studentsInfoArray = JSON.parse(localStorage.getItem('studentsInfoArray')) || [];
+
 const addStudentBtn = document.getElementById('addStudentBtn')
 addStudentBtn.addEventListener('click', (e) => {
     e.preventDefault()
     const inputName = document.getElementById('input-name')
-    const inputMarks = document.getElementById('input-marks')
-    if (inputName.value === '' || inputMarks.value === '') {
+    const inputAge = document.getElementById('input-age')
+    if (inputName.value === '' || inputAge.value === '') {
         return alert('please full fill input')
     }
+    const datas = document.querySelector('input[name="gender"]:checked')
+    if (!datas) {
+        return alert('add gender')
+    }
+
     const studentInfoObject = {
         'name': inputName.value,
-        'marks': inputMarks.value
+        'marks': inputAge.value,
+        'gender': datas.value
     }
     studentsInfoArray.push(studentInfoObject)
+    localStorage.setItem('studentsInfoArray', JSON.stringify(studentsInfoArray))
 
 
-    const infoHere = document.getElementById('infoHere')
-    infoHere.innerHTML = ''
-    for (let studentInfo of studentsInfoArray) {
-        infoHere.innerHTML += ` <p>name: ${studentInfo.name} marks: ${studentInfo.marks} </p>`
-    }
-
-    inputName.value = ''
-    inputMarks.value = ''
-    // window.location.href = 'student-info.html'
+    inputName.value = '';
+    inputAge.value = '';
+    window.location = 'student-info.html'
 })

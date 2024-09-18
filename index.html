@@ -9,19 +9,32 @@
 </head>
 
 <body>
-    <section>
+    <section class="sectionContainer">
         <h1 class="title-section">School Management System</h1>
-        <form class="studentForm">
-            <input id="input-name" type="text" placeholder="Enter Student Name">
-            <input id="input-marks" type="number" placeholder="Enter Student Marks">
-            <button type="submit" id="addStudentBtn">Add Student</button>
-        </form>
-        
-       <div id="infoHere">
+        <div class="formContainer">
+            <div class="studentForm">
+                <input id="input-name" type="text" placeholder="Enter student name">
+                <input id="input-age" type="number" placeholder="Enter student age">
+                <div id="gendersInput" class="input">
+                    <input id="r1" class="r" name="gender" type="radio" value="Male">
+                    <label for="r1">Male</label>
+                    <input id="r2" class="r" name="gender" type="radio" value="Female">
+                    <label for="r2">Female</label>
+                    <input id="r3" class="r" name="gender" type="radio" value="Others">
+                    <label for="r3">Others</label>
+                </div>
+                
+                <input type="email" name="email" id="input-email" placeholder="Enter student email">
+                <input type="tel" name="" id="input-tel" placeholder="Enter studnet phone number">
+                <input type="date" name="date-of-birth" id="input-birth">
+                <button type="submit" id="addStudentBtn">Add Student</button>
+            </div>
+        </div>
 
-       </div>
     </section>
-    <script src="js/projects.js"></script>
+
+
+    <script type="module" src="js/projects.js"></script>
 </body>
 
 </html>

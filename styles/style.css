@@ -10,6 +10,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .title-section {
@@ -23,8 +24,8 @@
     width: 80%;
     margin: auto;
     margin-top: 50px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 50px;
     background: var(--black);
@@ -32,10 +33,45 @@
     border-radius: 10px;
 }
 
+#addStudentBtn {
+    grid-column: span 2;
+    width: 100%;
+}
+
+
 .studentForm input,
-button {
+button,
+.input {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 20px;
     outline: none;
+    border: none;
+}
+
+@media screen and (max-width : 576px) {
+    section{
+        padding: 10px;
+    }
+    .studentForm {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 100%;
+        padding: 20px;
+    }
+
+    #addStudentBtn {
+        grid-column: span 1;
+        width: 100%;
+    }
+
+    .studentForm input,
+    button,
+    .input {
+        padding: 5px 10px;
+        border-radius: 5px
+    }
+
+    .formContainer {
+        width: 100%;
+    }
 }
