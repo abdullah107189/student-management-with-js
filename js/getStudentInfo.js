@@ -1,1 +1,17 @@
 const getData = JSON.parse(localStorage.getItem('studentsInfoArray'));
+for (let data of getData) {
+    const cards = document.querySelector('.cards')
+
+    const card = document.createElement('div')
+    card.className = 'card';
+    card.innerHTML = `
+                    <p><span class="bold-label">Name:</span> ${data.name}</p>
+                    <p><span class="bold-label">Marks:</span> ${data.marks}</p>
+                    <p><span class="bold-label">Gender:</span> ${data.gender}</p>
+                    <p><span class="bold-label">Email:</span> ${data.email}</p>
+                    <p><span class="bold-label">Phone:</span> ${data.phone}</p>
+                    <p><span class="bold-label">Date:</span> ${data.dob}</p>
+              
+    `
+    cards.appendChild(card)
+}
