@@ -14,9 +14,9 @@
         <a class="AllStudentInfoBtn" href="student-info.html">Students Info</a>
         <div class="formContainer">
             <div class="studentForm">
-                <input id="input-name" type="text" placeholder="Enter student name">
-                <input id="input-age" type="number" placeholder="Enter student age">
-                <div id="gendersInput" class="input">
+                <input id="input-name" type="text" placeholder="Enter student name" required>
+                <input id="input-age" type="number" placeholder="Enter student age" required>
+                <div id="gendersInput" class="input" required>
                     <input id="r1" class="r" name="gender" type="radio" value="Male">
                     <label for="r1">Male</label>
                     <input id="r2" class="r" name="gender" type="radio" value="Female">
@@ -24,16 +24,17 @@
                     <input id="r3" class="r" name="gender" type="radio" value="Others">
                     <label for="r3">Others</label>
                 </div>
-
-                <input type="email" name="email" id="input-email" placeholder="Enter student email">
-                <input type="tel" name="" id="input-phone-number" placeholder="Enter studnet phone number">
-                <input type="date" name="date-of-birth" id="input-birth">
+                <input type="email" name="email" id="input-email" placeholder="Enter student email" required>
+                <input type="tel" name="" id="input-phone-number" placeholder="Enter studnet phone number" required>
+                <input type="date" name="date-of-birth" id="input-birth" required>
+                <input type="file" accept="image/*" id="image-select" required>
                 <button type="submit" id="addStudentBtn">Add Student</button>
             </div>
         </div>
 
     </section>
 
+   
 
     <script type="module" src="js/projects.js"></script>
 </body>

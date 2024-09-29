@@ -1,7 +1,6 @@
 const getData = JSON.parse(localStorage.getItem('studentsInfoArray'));
 const getStudentData = (allStudent) => {
     const cards = document.querySelector('.cards')
-    console.log(allStudent.length)
     if (allStudent.length === 0) {
         cards.innerHTML = `<p class="empty">There are no student info</p>`
     }
@@ -11,16 +10,23 @@ const getStudentData = (allStudent) => {
         const card = document.createElement('div')
         card.className = 'card';
         card.innerHTML = `
-                        <p><span class="bold-label">Name:</span> ${data.name}</p>
-                        <p><span class="bold-label">Marks:</span> ${data.marks}</p>
-                        <p><span class="bold-label">Gender:</span> ${data.gender}</p>
-                        <p><span class="bold-label">Email:</span> ${data.email}</p>
-                        <p><span class="bold-label">Phone:</span> ${data.phone}</p>
-                        <p><span class="bold-label">Date:</span> ${data.dob}</p>
-                        <div class="btnContainer">
-                            <button>Update</button>
-                            <button>Delete</button>
-                        </div>
+                 <div class="cardContainer">
+        <div>
+
+            <p><span class="bold-label">Name:</span> ${data.name}</p>
+            <p><span class="bold-label">Marks:</span> ${data.marks}</p>
+            <p><span class="bold-label">Gender:</span> ${data.gender}</p>
+            <p><span class="bold-label">Email:</span> ${data.email}</p>
+            <p><span class="bold-label">Phone:</span> ${data.phone}</p>
+            <p><span class="bold-label">Date:</span> ${data.dob}</p>
+
+            <div class="btnContainer">
+                <button>Update</button>
+                <button onclick="deleteInfo(this)">Delete</button>
+            </div>
+        </div>
+        <img width="200px" hight="auto" src=${data.img} alt="">
+    </div>
                   
         `
         cards.appendChild(card)
@@ -45,3 +51,9 @@ const handleSubmit = (e) => {
     console.log(studentSearch.value)
 
 }
+
+
+// // localStorage delete section 
+// const deleteInfo = (e) =>{
+//     console.log(e)
+// }
