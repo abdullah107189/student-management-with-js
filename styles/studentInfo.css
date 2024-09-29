@@ -123,3 +123,9 @@ body {
         padding: 20px;
     }
 }
+.empty{
+    text-align: center;
+    border: 2px solid red;  
+    font-size: 40px;
+    color: white;
+}
